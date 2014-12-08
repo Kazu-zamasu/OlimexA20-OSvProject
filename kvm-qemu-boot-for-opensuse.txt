@@ -1,0 +1,126 @@
+root@a20-olimex:~/kvm-arm/opensuse# qemu-system-arm -enable-kvm -m 512m -M vexpr 
+ess-a15 -cpu host -kernel zImage -dtb vexpress-v2p-ca15-tc1.dtb -append "root=/d 
+ev/vda console=ttyAMA0 rootwait" -drive if=none,file=opensuse-factory.img,id=fac 
+tory -device virtio-blk-device,drive=factory -net nic -net user -monitor null -s 
+erial stdio -nographic
+0 rootwait
+PID hash table entries: 2048 (order: 1, 8192 bytes)
+Dentry cache hash table entries: 65536 (order: 6, 262144 bytes)
+Inode-cache hash table entries: 32768 (order: 5, 131072 bytes)
+Memory: 513156K/524288K available (4604K kernel code, 188K rwdata, 1284K rodata, 235K init, 150K bss, 11132K reserved)
+...
+[  OK  ] Started OpenSSH Daemon.
+[  OK  ] Reached target Multi-User System.
+[  OK  ] Reached target Graphical Interface.
+
+Welcome to openSUSE Factory "Bottle" - Kernel 3.16.0-rc6 (ttyAMA0).
+
+
+linux login: 
+
+Now we can start playing with this Guest. The default credentials are root/linux:
+
+linux login: root
+Password: linux
+
+Last login: Thu Jul 24 11:57:53 on ttyAMA0
+Have a lot of fun...
+linux:~ # uname -a
+Linux linux 3.16.0-rc6 #12 SMP Thu Jul 24 11:48:10 CEST 2014 armv7l armv7l armv7l GNU/Linux
+linux:~ # cat /proc/cpuinfo
+processor	: 0
+model name	: ARMv7 Processor rev 4 (v7l)
+Features	: swp half thumb fastmult vfp edsp neon vfpv3 tls vfpv4 idiva idivt vfpd32 lpae evtstrm 
+CPU implementer	: 0x41
+CPU architecture: 7
+CPU variant	: 0x0
+CPU part	: 0xc07
+CPU revision	: 4
+
+Hardware	: ARM-Versatile Express
+Revision	: 0000
+Serial		: 0000000000000000
+
+ 
+
+That’s all, now you’re ready for ARM virtualization! ;-)
+slp
+
+3 thoughts on “Enabling KVM virtualization on ARM (Allwinner A20)”
+
+    peter
+    28 julio, 2014 a las 5:05 pm
+
+    Very detailed tutorial.
+    Popolon
+    8 agosto, 2014 a las 12:07 am
+
+    On the dd line:
+    sudo dd if=u-boot-sunxi/u-boot-sunxi-with-spl.bin of=/dev/mmcblk0 bs=1k count=8
+
+    Isn’t need be replaced by?
+    sudo dd if=u-boot-sunxi/u-boot-sunxi-with-spl.bin of=/dev/mmcblk0 bs=1k skip=8
+
+    After this :
+    http://linux-sunxi.org/Bootable_SD_card#SD_Card_Layout
+
+    The First 8k is for partition table (that you didn’t defined/speek about). SPL and uboot start at 8K.
+        slp
+        8 agosto, 2014 a las 10:04 am
+
+        You’re right. Instead of “count” it should be “seek” (“skip” would omit the blocks from the input).
+
+        I’ve just fixed it on the article. Thanks!
+
+Deja un comentario
+
+Tu dirección de correo electrónico no será publicada. Los campos necesarios están marcados *
+
+Nombre *
+
+Correo electrónico *
+
+Web
+
+Prove that you are a human!
+
+Comentario
+
+Puedes usar las siguientes etiquetas y atributos HTML: <a href="" title=""> <abbr title=""> <acronym title=""> <b> <blockquote cite=""> <cite> <code> <del datetime=""> <em> <i> <q cite=""> <strike> <strong>
+
+Post navigation
+Cómo habilitar virtualización KVM sobre ARM (Allwinner A20)
+flexVM 2.1: Un año de trabajo y 158 tickets de SCRUM
+Entradas recientes
+
+    flexVM 2.1: Un año de trabajo y 158 tickets de SCRUM
+    Enabling KVM virtualization on ARM (Allwinner A20)
+    Cómo habilitar virtualización KVM sobre ARM (Allwinner A20)
+    ¿En qué hemos trabajado esta semana? (02/06/14)
+    Optimizar el rendimiento de disco en una máquina virtual
+
+Archivos
+
+    diciembre 2014
+    julio 2014
+    junio 2014
+    mayo 2014
+
+Categorías
+
+    Guías
+    Notas de prensa
+    Rendimiento
+    Sin categoría
+
+Meta
+
+    Acceder
+    RSS de las entradas
+    RSS de los comentarios
+    WordPress.org
+
+audio: Could not init `oss' audio driver
+
+mmuhhhhhh.............
+I think not much zImage or opensuse userland. but, running KVM.
