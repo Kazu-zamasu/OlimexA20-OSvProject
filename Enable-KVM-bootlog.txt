@@ -1,0 +1,399 @@
+U-Boot SPL 2014.04-ga74a847 (Dec 09 2014 - 00:24:50)
+Board: A20-OLinuXino_MICRO
+DRAM: 1024 MiB
+CPU: 960000000Hz, AXI/AHB/APB: 3/2/2
+spl: not an uImage at 1600
+
+
+U-Boot 2014.04-ga74a847 (Dec 09 2014 - 00:24:50) Allwinner Technology
+
+CPU:   Allwinner A20 (SUN7I)
+Board: A20-OLinuXino_MICRO
+I2C:   ready
+DRAM:  1 GiB
+MMC:   SUNXI SD/MMC: 0
+*** Warning - bad CRC, using default environment
+
+In:    serial
+Out:   serial
+Err:   serial
+Net:   emac
+Hit any key to stop autoboot:  0 
+reading uEnv.txt
+** Unable to read file uEnv.txt **
+Failed to mount ext2 filesystem...
+** Unrecognized filesystem type **
+Failed to mount ext2 filesystem...
+** Unrecognized filesystem type **
+reading boot.scr
+417 bytes read in 16 ms (25.4 KiB/s)
+Jumping to boot.scr
+## Executing script at 44000000
+reading /uImage
+2646896 bytes read in 159 ms (15.9 MiB/s)
+reading /sun7i-a20-olinuxino-micro.dtb
+21393 bytes read in 31 ms (673.8 KiB/s)
+## Booting kernel from Legacy Image at 46000000 ...
+   Image Name:   Linux-3.16.0-rc6
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    2646832 Bytes = 2.5 MiB
+   Load Address: 40008000
+   Entry Point:  40008000
+   Verifying Checksum ... OK
+## Flattened Device Tree blob at 49000000
+   Booting using the fdt blob at 0x49000000
+   Loading Kernel Image ... OK
+   Using Device Tree in place at 49000000, end 49008390
+
+Starting kernel ...
+
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 3.16.0-rc6 (kazu@kazu-develop) (gcc version 4.9.1 (Ubuntu/Linaro 4.9.1-16ubuntu6) ) #3 SMP Tue Dec 9 00:11:12 JST 2014
+[    0.000000] CPU: ARMv7 Processor [410fc074] revision 4 (ARMv7), cr=30c5387d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] Machine model: Olimex A20-Olinuxino Micro
+[    0.000000] Forcing write-allocate cache policy for SMP
+[    0.000000] Memory policy: Data cache writealloc
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: Using PSCI v0.1 Function IDs from DT
+[    0.000000] PERCPU: Embedded 5 pages/cpu @eefd4000 s6912 r0 d13568 u32768
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 260624
+[    0.000000] Kernel command line: console=ttyS0,115200 ro root=/dev/mmcblk0p2 rootwait
+[    0.000000] PID hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.000000] Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+[    0.000000] Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Memory: 1034124K/1048576K available (3856K kernel code, 186K rwdata, 764K rodata, 226K init, 240K bss, 14452K reserved, 270336K highmem)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xffc00000 - 0xffe00000   (2048 kB)
+[    0.000000]     vmalloc : 0xf0000000 - 0xff000000   ( 240 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xef800000   ( 760 MB)
+[    0.000000]     pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+[    0.000000]       .text : 0xc0008000 - 0xc048b2f0   (4621 kB)
+[    0.000000]       .init : 0xc048c000 - 0xc04c4b00   ( 227 kB)
+[    0.000000]       .data : 0xc04c6000 - 0xc04f4a80   ( 187 kB)
+[    0.000000]        .bss : 0xc04f4a88 - 0xc0530bac   ( 241 kB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=2, Nodes=1
+[    0.000000] Hierarchical RCU implementation.
+[    0.000000] 	RCU restricting CPUs from NR_CPUS=4 to nr_cpu_ids=2.
+[    0.000000] RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=2
+[    0.000000] NR_IRQS:16 nr_irqs:16 16
+[    0.000000] Architected cp15 timer(s) running at 24.00MHz (phys).
+[    0.000009] sched_clock: 56 bits at 24MHz, resolution 41ns, wraps every 2863311519744ns
+[    0.000017] Switching to timer-based delay loop
+[    0.000283] sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 178956969942ns
+[    0.000408] sched_clock: 32 bits at 160MHz, resolution 6ns, wraps every 26843545593ns
+[    0.000583] Console: colour dummy device 80x30
+[    0.000611] Calibrating delay loop (skipped), value calculated using timer frequency.. 48.00 BogoMIPS (lpj=240000)
+[    0.000625] pid_max: default: 32768 minimum: 301
+[    0.000740] Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.000752] Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.001427] CPU: Testing write buffer coherency: ok
+[    0.001739] /cpus/cpu@0 missing clock-frequency property
+[    0.001756] /cpus/cpu@1 missing clock-frequency property
+[    0.001769] CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+[    0.001824] Setting up static identity map for 0x403ad940 - 0x403ad998
+[    0.003217] CPU1: Booted secondary processor
+[    0.003267] CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+[    0.003346] Brought up 2 CPUs
+[    0.003365] SMP: Total of 2 processors activated.
+[    0.003371] CPU: All CPU(s) started in HYP mode.
+[    0.003376] CPU: Virtualization extensions available.
+[    0.004029] devtmpfs: initialized
+[    0.007749] VFP support v0.3: implementor 41 architecture 2 part 30 variant 7 rev 4
+[    0.008116] pinctrl core: initialized pinctrl subsystem
+[    0.008487] regulator-dummy: no parameters
+[    0.013121] NET: Registered protocol family 16
+[    0.013463] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.018465] hw-breakpoint: found 5 (+1 reserved) breakpoint and 4 watchpoint registers.
+[    0.018481] hw-breakpoint: maximum watchpoint size is 8 bytes.
+[    0.024947] reg-fixed-voltage ahci-5v: could not find pctldev for node /soc@01c00000/pinctrl@01c20800/ahci_pwr_pin@0, deferring probe
+[    0.024976] platform ahci-5v: Driver reg-fixed-voltage requests probe deferral
+[    0.025002] reg-fixed-voltage usb1-vbus: could not find pctldev for node /soc@01c00000/pinctrl@01c20800/usb1_vbus_pin@0, deferring probe
+[    0.025016] platform usb1-vbus: Driver reg-fixed-voltage requests probe deferral
+[    0.025037] reg-fixed-voltage usb2-vbus: could not find pctldev for node /soc@01c00000/pinctrl@01c20800/usb2_vbus_pin@0, deferring probe
+[    0.025048] platform usb2-vbus: Driver reg-fixed-voltage requests probe deferral
+[    0.025238] vcc3v0: 3000 mV 
+[    0.025464] vcc3v3: 3300 mV 
+[    0.026018] SCSI subsystem initialized
+[    0.026518] usbcore: registered new interface driver usbfs
+[    0.026586] usbcore: registered new interface driver hub
+[    0.026714] usbcore: registered new device driver usb
+[    0.026877] pps_core: LinuxPPS API ver. 1 registered
+[    0.026885] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.026921] PTP clock support registered
+[    0.027882] Switched to clocksource arch_sys_counter
+[    0.037243] NET: Registered protocol family 2
+[    0.037836] TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.037984] TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.038106] TCP: Hash tables configured (established 8192 bind 8192)
+[    0.038200] TCP: reno registered
+[    0.038214] UDP hash table entries: 512 (order: 2, 16384 bytes)
+[    0.038275] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+[    0.038536] NET: Registered protocol family 1
+[    0.038921] RPC: Registered named UNIX socket transport module.
+[    0.038933] RPC: Registered udp transport module.
+[    0.038939] RPC: Registered tcp transport module.
+[    0.038945] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.039641] kvm [1]: interrupt-controller@1c84000 IRQ25
+[    0.039875] kvm [1]: timer IRQ27
+[    0.039894] kvm [1]: Hyp mode initialized successfully
+[    0.040369] hw perfevents: enabled with ARMv7 Cortex-A7 PMU driver, 5 counters available
+[    0.041387] futex hash table entries: 512 (order: 3, 32768 bytes)
+[    0.051890] NFS: Registering the id_resolver key type
+[    0.051965] Key type id_resolver registered
+[    0.051973] Key type id_legacy registered
+[    0.052147] bounce: pool size: 64 pages
+[    0.052361] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 250)
+[    0.052379] io scheduler noop registered
+[    0.052390] io scheduler deadline registered
+[    0.052553] io scheduler cfq registered (default)
+[    0.052819] platform 1c13400.phy: Driver sun4i-usb-phy requests probe deferral
+[    0.055087] sun7i-a20-pinctrl 1c20800.pinctrl: initialized sunXi PIO driver
+[    0.109901] Serial: 8250/16550 driver, 8 ports, IRQ sharing disabled
+[    0.112869] console [ttyS0] disabled
+[    0.133089] 1c28000.serial: ttyS0 at MMIO 0x1c28000 (irq = 33, base_baud = 1500000) is a U6_16550A
+[    0.766709] console [ttyS0] enabled
+[    0.792445] dw-apb-uart 1c29800.serial: Couldn't set LCR to 0
+[    0.799190] dw-apb-uart 1c29800.serial: Couldn't set LCR to 0
+[    0.804961] 1c29800.serial: ttyS1 at MMIO 0x1c29800 (irq = 51, base_baud = 1500000) is a U6_16550A
+[    0.836189] dw-apb-uart 1c29c00.serial: Couldn't set LCR to 0
+[    0.842935] dw-apb-uart 1c29c00.serial: Couldn't set LCR to 0
+[    0.848726] 1c29c00.serial: ttyS2 at MMIO 0x1c29c00 (irq = 52, base_baud = 1500000) is a U6_16550A
+[    0.862146] loop: module loaded
+[    0.866102] platform 1c18000.sata: Driver ahci-sunxi requests probe deferral
+[    0.875237] stmmaceth 1c50000.ethernet: no regulator found
+[    0.880839] stmmaceth 1c50000.ethernet: no reset control found
+[    0.886668]  Ring mode enabled
+[    0.889737]  No HW DMA feature register supported
+[    0.894261]  Normal descriptors
+[    0.897580]  TX Checksum insertion supported
+[    0.905284] libphy: stmmac: probed
+[    0.908721] eth0: PHY ID 00008201 at 1 IRQ POLL (stmmac-0:01) active
+[    0.915194] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    0.921739] ehci-platform: EHCI generic platform driver
+[    0.927109] platform 1c14000.usb: Driver ehci-platform requests probe deferral
+[    0.934416] platform 1c1c000.usb: Driver ehci-platform requests probe deferral
+[    0.941737] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    0.947964] ohci-platform: OHCI generic platform driver
+[    0.953288] platform 1c14400.usb: Driver ohci-platform requests probe deferral
+[    0.960587] platform 1c1c400.usb: Driver ohci-platform requests probe deferral
+[    0.968321] sunxi-rtc 1c20d00.rtc: rtc core: registered rtc-sunxi as rtc0
+[    0.975106] sunxi-rtc 1c20d00.rtc: RTC enabled
+[    0.979683] i2c /dev entries driver
+[    0.985267] sunxi-wdt 1c20c90.watchdog: Watchdog enabled (timeout=16 sec, nowayout=0)
+[    0.993680] sunxi-mmc 1c0f000.mmc: No vqmmc regulator found
+[    0.999848] sunxi-mmc 1c0f000.mmc: Got CD GPIO #225.
+[    1.037929] sunxi-mmc 1c0f000.mmc: base:0xf00bc000 irq:64
+[    1.043822] sunxi-mmc 1c12000.mmc: No vqmmc regulator found
+[    1.049944] sunxi-mmc 1c12000.mmc: Got CD GPIO #235.
+[    1.074954] mmc0: host does not support reading read-only switch. assuming write-enable.
+[    1.085454] mmc0: new high speed SDHC card at address 59b4
+[    1.087898] sunxi-mmc 1c12000.mmc: base:0xf00d2000 irq:67
+[    1.089113] usbcore: registered new interface driver usbhid
+[    1.089116] usbhid: USB HID core driver
+[    1.089563] TCP: cubic registered
+[    1.089577] NET: Registered protocol family 17
+[    1.089739] Key type dns_resolver registered
+[    1.089849] Registering SWP/SWPB emulation handler
+[    1.122965] mmcblk0: mmc0:59b4 USDU1 7.37 GiB 
+[    1.128018] ahci-5v: 5000 mV 
+[    1.131378] usb1-vbus: 5000 mV 
+[    1.134819] usb2-vbus: 5000 mV 
+[    1.139094]  mmcblk0: p1 p2
+[    1.207937] ahci-sunxi 1c18000.sata: controller can't do PMP, turning off CAP_PMP
+[    1.215422] ahci-sunxi 1c18000.sata: forcing PORTS_IMPL to 0x1
+[    1.221325] ahci-sunxi 1c18000.sata: AHCI 0001.0100 32 slots 1 ports 3 Gbps 0x1 impl platform mode
+[    1.230291] ahci-sunxi 1c18000.sata: flags: ncq sntf pm led clo only pio slum part ccc 
+[    1.239252] scsi0 : ahci_platform
+[    1.242911] ata1: SATA max UDMA/133 mmio [mem 0x01c18000-0x01c18fff] port 0x100 irq 88
+[    1.251153] ehci-platform 1c14000.usb: EHCI Host Controller
+[    1.256753] ehci-platform 1c14000.usb: new USB bus registered, assigned bus number 1
+[    1.264628] ehci-platform 1c14000.usb: irq 71, io mem 0x01c14000
+[    1.287917] ehci-platform 1c14000.usb: USB 2.0 started, EHCI 1.00
+[    1.294990] hub 1-0:1.0: USB hub found
+[    1.298800] hub 1-0:1.0: 1 port detected
+[    1.303325] ehci-platform 1c1c000.usb: EHCI Host Controller
+[    1.308956] ehci-platform 1c1c000.usb: new USB bus registered, assigned bus number 2
+[    1.316793] ehci-platform 1c1c000.usb: irq 72, io mem 0x01c1c000
+[    1.337907] ehci-platform 1c1c000.usb: USB 2.0 started, EHCI 1.00
+[    1.344835] hub 2-0:1.0: USB hub found
+[    1.348649] hub 2-0:1.0: 1 port detected
+[    1.353146] ohci-platform 1c14400.usb: Generic Platform OHCI controller
+[    1.359812] ohci-platform 1c14400.usb: new USB bus registered, assigned bus number 3
+[    1.367631] ohci-platform 1c14400.usb: irq 96, io mem 0x01c14400
+[    1.432748] hub 3-0:1.0: USB hub found
+[    1.436537] hub 3-0:1.0: 1 port detected
+[    1.441108] ohci-platform 1c1c400.usb: Generic Platform OHCI controller
+[    1.447751] ohci-platform 1c1c400.usb: new USB bus registered, assigned bus number 4
+[    1.455618] ohci-platform 1c1c400.usb: irq 97, io mem 0x01c1c400
+[    1.522776] hub 4-0:1.0: USB hub found
+[    1.526567] hub 4-0:1.0: 1 port detected
+[    1.530989] sunxi-rtc 1c20d00.rtc: setting system clock to 2014-12-08 20:39:21 UTC (1418071161)
+[    1.543312] vcc3v0: disabling
+[    1.617917] ata1: SATA link down (SStatus 0 SControl 300)
+[    1.624432] EXT4-fs (mmcblk0p2): mounting ext3 file system using the ext4 subsystem
+[    1.633458] EXT4-fs (mmcblk0p2): INFO: recovery required on readonly filesystem
+[    1.640805] EXT4-fs (mmcblk0p2): write access will be enabled during recovery
+[    1.656867] EXT4-fs (mmcblk0p2): recovery complete
+[    1.702155] EXT4-fs (mmcblk0p2): mounted filesystem with ordered data mode. Opts: (null)
+[    1.710315] VFS: Mounted root (ext3 filesystem) readonly on device 179:2.
+[    1.720029] devtmpfs: mounted
+[    1.723260] Freeing unused kernel memory: 224K (c048c000 - c04c4000)
+
+INIT: version 2.88 booting
+
+[info] Using makefile-style concurrent boot in runlevel S.
+[....] Starting the hotplug events dispatcher: udevd[    2.657590] udevd[157]: starting version 175
+udevd[157]: specified group 'videO' unknown
+
+
+. ok 
+[....] Synthesizing the initial hotplug events...udevd[157]: specified group 'videO' unknown
+
+
+done.
+[ ok ] Waiting for /dev to be fully populated...done.
+Starting fake hwclock: loading system time.
+Current system time: 2014-12-08 20:39:23
+fake-hwclock saved clock information is in the past: 2014-12-08 20:38:58
+To set system time to this saved clock anyway, use "force"
+[ ok ] Activating swap...done.
+[    4.430310] EXT4-fs (mmcblk0p2): re-mounted. Opts: (null)
+[....] Checking root file system...fsck from util-linux 2.20.1
+/dev/mmcblk0p2: clean, 107145/241920 files, 958272/967424 blocks
+done.
+[    4.683843] EXT4-fs (mmcblk0p2): re-mounted. Opts: errors=remount-ro
+[ ok ] Cleaning up temporary files... /tmp.
+[ ok ] Activating lvm and md swap...done.
+[....] Checking file systems...fsck from util-linux 2.20.1
+done.
+[ ok ] Mounting local filesystems...done.
+[ ok ] Activating swapfile swap...done.
+[ ok ] Cleaning up temporary files....
+[ ok ] Setting kernel variables ...done.
+[    7.580309] random: dd urandom read with 121 bits of entropy available
+[....] Configuring network interfaces...[    7.948704]  No MAC Management Counters available
+done.
+[    8.180289] random: nonblocking pool is initialized
+[ ok ] Cleaning up temporary files....
+[ ok ] Setting up ALSA...done (none loaded).
+[ ok ] Setting up X socket directories... /tmp/.X11-unix /tmp/.ICE-unix.
+
+INIT: Entering runlevel: 2
+
+[info] Using makefile-style concurrent boot in runlevel 2.
+[ ok ] Starting enhanced syslogd: rsyslogd.
+Starting X display manager: slim.
+[ ok ] Loading cpufreq kernel modules...done (none).
+[ ok ] Starting NTP server: ntpd.
+[    9.938281] stmmaceth 1c50000.ethernet eth0: Link is Up - 100Mbps/Full - flow control rx/tx
+[ ok ] CPUFreq Utilities: Setting performance CPUFreq governor...disabled, governor not available...done.
+[warn] /etc/environment has been deprecated for locale information; use /etc/default/locale for LC_ALL="en_US.utf8" instead ... (warning).
+[ ok ] Starting periodic command scheduler: cron.
+[ ok ] Starting system message bus: dbus.
+[ ok ] Starting OpenBSD Secure Shell server: sshd.
+[ ok ] Starting network connection manager: NetworkManager.
+chmod: cannot access `/dev/disp': No such file or directory
+chmod: cannot access `/dev/cedar_dev': No such file or directory
+chmod: cannot access `/dev/ump': No such file or directory
+chmod: cannot access `/dev/mali': No such file or directory
+[FAIL] startpar: service(s) returned failure: rc.local ... failed!
+
+Debian GNU/Linux 7 a20-olimex ttyS0
+
+a20-olimex login: 
+Debian GNU/Linux 7 a20-olimex ttyS0
+
+a20-olimex login: root
+
+Password: 
+Last login: Mon Dec  8 20:17:59 UTC 2014 on ttyS0
+Linux a20-olimex 3.16.0-rc6 #3 SMP Tue Dec 9 00:11:12 JST 2014 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+root@a20-olimex:~# uname -a
+Linux a20-olimex 3.16.0-rc6 #3 SMP Tue Dec 9 00:11:12 JST 2014 armv7l GNU/Linux
+root@a20-olimex:~# lsmod
+libkmod: ERROR ../libkmod/libkmod-module.c:1567 kmod_module_new_from_loaded: could not open /proc/modules: No such file or directory
+Error: could not get list of modules: No such file or directory
+root@a20-olimex:~# ls /dev
+block               ptyc5  ptyqe  ptyv7  random  ttya1  ttyea  ttysb  ttyx4
+bus                 ptyc6  ptyqf  ptyv8  root    ttya2  ttyeb  ttysc  ttyx5
+char                ptyc7  ptyr0  ptyv9  rtc0    ttya3  ttyec  ttysd  ttyx6
+console             ptyc8  ptyr1  ptyva  shm     ttya4  ttyed  ttyse  ttyx7
+cpu_dma_latency     ptyc9  ptyr2  ptyvb  stderr  ttya5  ttyee  ttysf  ttyx8
+disk                ptyca  ptyr3  ptyvc  stdin   ttya6  ttyef  ttyt0  ttyx9
+fd                  ptycb  ptyr4  ptyvd  stdout  ttya7  ttyp0  ttyt1  ttyxa
+full                ptycc  ptyr5  ptyve  tty     ttya8  ttyp1  ttyt2  ttyxb
+i2c-0               ptycd  ptyr6  ptyvf  tty0    ttya9  ttyp2  ttyt3  ttyxc
+i2c-1               ptyce  ptyr7  ptyw0  tty1    ttyaa  ttyp3  ttyt4  ttyxd
+i2c-2               ptycf  ptyr8  ptyw1  tty10   ttyab  ttyp4  ttyt5  ttyxe
+kmem                ptyd0  ptyr9  ptyw2  tty11   ttyac  ttyp5  ttyt6  ttyxf
+kmsg                ptyd1  ptyra  ptyw3  tty12   ttyad  ttyp6  ttyt7  ttyy0
+kvm                 ptyd2  ptyrb  ptyw4  tty13   ttyae  ttyp7  ttyt8  ttyy1
+log                 ptyd3  ptyrc  ptyw5  tty14   ttyaf  ttyp8  ttyt9  ttyy2
+loop0               ptyd4  ptyrd  ptyw6  tty15   ttyb0  ttyp9  ttyta  ttyy3
+loop1               ptyd5  ptyre  ptyw7  tty16   ttyb1  ttypa  ttytb  ttyy4
+loop2               ptyd6  ptyrf  ptyw8  tty17   ttyb2  ttypb  ttytc  ttyy5
+loop3               ptyd7  ptys0  ptyw9  tty18   ttyb3  ttypc  ttytd  ttyy6
+loop4               ptyd8  ptys1  ptywa  tty19   ttyb4  ttypd  ttyte  ttyy7
+loop5               ptyd9  ptys2  ptywb  tty2    ttyb5  ttype  ttytf  ttyy8
+loop6               ptyda  ptys3  ptywc  tty20   ttyb6  ttypf  ttyu0  ttyy9
+loop7               ptydb  ptys4  ptywd  tty21   ttyb7  ttyq0  ttyu1  ttyya
+loop-control        ptydc  ptys5  ptywe  tty22   ttyb8  ttyq1  ttyu2  ttyyb
+MAKEDEV             ptydd  ptys6  ptywf  tty23   ttyb9  ttyq2  ttyu3  ttyyc
+mem                 ptyde  ptys7  ptyx0  tty24   ttyba  ttyq3  ttyu4  ttyyd
+mmcblk0             ptydf  ptys8  ptyx1  tty25   ttybb  ttyq4  ttyu5  ttyye
+mmcblk0p1           ptye0  ptys9  ptyx2  tty26   ttybc  ttyq5  ttyu6  ttyyf
+mmcblk0p2           ptye1  ptysa  ptyx3  tty27   ttybd  ttyq6  ttyu7  ttyz0
+net                 ptye2  ptysb  ptyx4  tty28   ttybe  ttyq7  ttyu8  ttyz1
+network_latency     ptye3  ptysc  ptyx5  tty29   ttybf  ttyq8  ttyu9  ttyz2
+network_throughput  ptye4  ptysd  ptyx6  tty3    ttyc0  ttyq9  ttyua  ttyz3
+null                ptye5  ptyse  ptyx7  tty30   ttyc1  ttyqa  ttyub  ttyz4
+ppp                 ptye6  ptysf  ptyx8  tty31   ttyc2  ttyqb  ttyuc  ttyz5
+ptmx                ptye7  ptyt0  ptyx9  tty32   ttyc3  ttyqc  ttyud  ttyz6
+pts                 ptye8  ptyt1  ptyxa  tty33   ttyc4  ttyqd  ttyue  ttyz7
+ptya0               ptye9  ptyt2  ptyxb  tty34   ttyc5  ttyqe  ttyuf  ttyz8
+ptya1               ptyea  ptyt3  ptyxc  tty35   ttyc6  ttyqf  ttyv0  ttyz9
+ptya2               ptyeb  ptyt4  ptyxd  tty36   ttyc7  ttyr0  ttyv1  ttyza
+ptya3               ptyec  ptyt5  ptyxe  tty37   ttyc8  ttyr1  ttyv2  ttyzb
+ptya4               ptyed  ptyt6  ptyxf  tty38   ttyc9  ttyr2  ttyv3  ttyzc
+ptya5               ptyee  ptyt7  ptyy0  tty39   ttyca  ttyr3  ttyv4  ttyzd
+ptya6               ptyef  ptyt8  ptyy1  tty4    ttycb  ttyr4  ttyv5  ttyze
+ptya7               ptyp0  ptyt9  ptyy2  tty40   ttycc  ttyr5  ttyv6  ttyzf
+ptya8               ptyp1  ptyta  ptyy3  tty41   ttycd  ttyr6  ttyv7  urandom
+ptya9               ptyp2  ptytb  ptyy4  tty42   ttyce  ttyr7  ttyv8  vcs
+ptyaa               ptyp3  ptytc  ptyy5  tty43   ttycf  ttyr8  ttyv9  vcs1
+ptyab               ptyp4  ptytd  ptyy6  tty44   ttyd0  ttyr9  ttyva  vcs2
+ptyac               ptyp5  ptyte  ptyy7  tty45   ttyd1  ttyra  ttyvb  vcs3
+ptyad               ptyp6  ptytf  ptyy8  tty46   ttyd2  ttyrb  ttyvc  vcs4
+ptyae               ptyp7  ptyu0  ptyy9  tty47   ttyd3  ttyrc  ttyvd  vcs5
+ptyaf               ptyp8  ptyu1  ptyya  tty48   ttyd4  ttyrd  ttyve  vcs6
+ptyb0               ptyp9  ptyu2  ptyyb  tty49   ttyd5  ttyre  ttyvf  vcs7
+ptyb1               ptypa  ptyu3  ptyyc  tty5    ttyd6  ttyrf  ttyw0  vcsa
+ptyb2               ptypb  ptyu4  ptyyd  tty50   ttyd7  ttys0  ttyw1  vcsa1
+ptyb3               ptypc  ptyu5  ptyye  tty51   ttyd8  ttyS0  ttyw2  vcsa2
+ptyb4               ptypd  ptyu6  ptyyf  tty52   ttyd9  ttys1  ttyw3  vcsa3
+ptyb5               ptype  ptyu7  ptyz0  tty53   ttyda  ttyS1  ttyw4  vcsa4
+ptyb6               ptypf  ptyu8  ptyz1  tty54   ttydb  ttys2  ttyw5  vcsa5
+ptyb7               ptyq0  ptyu9  ptyz2  tty55   ttydc  ttyS2  ttyw6  vcsa6
+ptyb8               ptyq1  ptyua  ptyz3  tty56   ttydd  ttys3  ttyw7  vcsa7
+ptyb9               ptyq2  ptyub  ptyz4  tty57   ttyde  ttyS3  ttyw8  watchdog
+ptyba               ptyq3  ptyuc  ptyz5  tty58   ttydf  ttys4  ttyw9  watchdog0
+ptybb               ptyq4  ptyud  ptyz6  tty59   ttye0  ttyS4  ttywa  xconsole
+ptybc               ptyq5  ptyue  ptyz7  tty6    ttye1  ttys5  ttywb  zero
+ptybd               ptyq6  ptyuf  ptyz8  tty60   ttye2  ttyS5  ttywc
+ptybe               ptyq7  ptyv0  ptyz9  tty61   ttye3  ttys6  ttywd
+ptybf               ptyq8  ptyv1  ptyza  tty62   ttye4  ttyS6  ttywe
+ptyc0               ptyq9  ptyv2  ptyzb  tty63   ttye5  ttys7  ttywf
+ptyc1               ptyqa  ptyv3  ptyzc  tty7    ttye6  ttyS7  ttyx0
+ptyc2               ptyqb  ptyv4  ptyzd  tty8    ttye7  ttys8  ttyx1
+ptyc3               ptyqc  ptyv5  ptyze  tty9    ttye8  ttys9  ttyx2
+ptyc4               ptyqd  ptyv6  ptyzf  ttya0   ttye9  ttysa  ttyx3
+root@a20-olimex:~# 
